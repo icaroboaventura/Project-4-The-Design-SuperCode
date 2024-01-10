@@ -69,28 +69,43 @@ header img {
   position: absolute;
   top: 0;
   right: 0;
+  animation: up_down 2s infinite;
+}
+
+@keyframes up_down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .hero {
-  max-width: 470px;
-  margin-left: 13vw;
+  max-width: 1152px;
+  margin: 0 auto;
 }
 
-.hero h1 {
+.hero_con {
+  max-width: 470px;
+}
+
+.hero_con h1 {
   font-family: Roboto_Medium;
   font-weight: 600;
   font-size: 5.4rem;
   margin-bottom: 20px;
 }
 
-.hero p:nth-of-type(1) {
+.hero_con p:nth-of-type(1) {
   font-family: Roboto_light;
   font-size: 1.8rem;
   color: var(--black-main);
   margin-bottom: 55px;
 }
 
-.hero p:nth-of-type(2) {
+.hero_con p:nth-of-type(2) {
   font-family: Roboto_Bold;
   font-size: 1.4rem;
   color: var(--pink);
@@ -107,35 +122,41 @@ header img {
 }
 
 .page_2 img {
-  width: 100%;
+  width: 90%;
 }
 
 .page_3 {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 8vw 11vw 2vw 13vw;
+  max-width: 1152px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.page_3 h2 {
+.aboutme {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.aboutme h2 {
   font-family: Roboto_Medium;
   font-weight: 600;
   font-size: 3.8rem;
   color: var(--black-main);
 }
 
-.page_3 h2:nth-of-type(1) {
+.aboutme h2:nth-of-type(1) {
   max-width: 250px;
 }
 
-.page_3 p {
+.aboutme p {
   font-family: Roboto_light;
   font-size: 1.8rem;
   color: var(--black-main);
   line-height: 36px;
 }
 
-.page_3 h2:nth-of-type(2) {
+.aboutme h2:nth-of-type(2) {
   grid-column: 1 / -1;
   max-width: 650px;
   padding: 7vw 0 0 5vw;
@@ -143,33 +164,50 @@ header img {
 
 .page_4 {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips_con {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 15vw 15vw 2vw 13vw;
+  row-gap: 100px;
+  width: 1152px;
 }
 
 .page_4 svg {
   width: 40px;
 }
 
-.page_4 div {
+.tips {
   display: flex;
   align-items: flex-start;
   gap: 25px;
 }
 
-.page_4 div article {
-  max-width: 300px;
+.tips_con div:nth-of-type(1),
+.tips_con div:nth-of-type(3) {
+  margin: 0 auto 0 0;
 }
 
-.page_4 div h3 {
+.tips_con div:nth-of-type(2),
+.tips_con div:nth-of-type(4) {
+  margin: 0 0 0 auto;
+}
+
+.tips article {
+  max-width: 310px;
+}
+
+.tips h3 {
   font-family: Roboto_Bold;
   font-size: 1.8rem;
   margin-bottom: 15px;
   color: var(--black-main);
 }
 
-.page_4 div p {
+.tips p {
   font-family: Roboto_light;
   font-size: 1.4rem;
   line-height: 28px;
@@ -204,7 +242,9 @@ header img {
 .steps {
   display: flex;
   flex-direction: column;
-  padding: 10vw 15vw 2vw 13vw;
+  gap: 200px;
+  max-width: 1152px;
+  margin: 0 auto;
 }
 
 .steps img {
@@ -213,8 +253,7 @@ header img {
 
 .steps div {
   display: flex;
-  gap: 12vw;
-  margin-bottom: 10vw;
+  justify-content: space-between;
 }
 
 .steps article {
@@ -252,9 +291,17 @@ footer {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.enter_email {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3vw;
+  padding-top: 20vh;
+  transition: ;
 }
 
 footer h2 {
@@ -274,10 +321,10 @@ footer p {
 
 input[type="email"] {
   text-align: center;
-  width: 650px;
   padding: 29px 0 29px 0;
   box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.087);
   border: none;
+  width: 50%;
 }
 
 input[type="email"]::placeholder {
@@ -297,7 +344,6 @@ input[type="submit"] {
   background-color: var(--pink);
 }
 
-footer p:nth-of-type(2) {
-  align-self: flex-start;
-  margin: 0 0 0 13vw;
+input[type="submit"]:hover {
+  background: linear-gradient(to right, var(--pink), blue);
 }
