@@ -5,7 +5,7 @@
  **Project Nr.:** 4  
  **Project Name:** The Design Project Landingpage  
  **Project Link** https://icaroboaventura.github.io/Project-4-The-Design-SuperCode/  
- **Project goal:** to put into practice what I learned in 3 weeks of the bootcamp.  
+ **Project goal:** to put into practice what I learned in 4 weeks of the bootcamp.  
 `Topics like:`  
 - Semantic HTML
 - Lists
